@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.harish.group14_hw08.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/setcity"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/setcity1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/setcity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/cityField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/setcity"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/_city_hint"
+            android:lines="1"
+            android:textAppearance="@android:style/TextAppearance.Material.Small.Inverse" />
+
+        <EditText
+            android:id="@+id/countryField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/_country_hint"
+            android:lines="1"
+            android:textAppearance="@android:style/TextAppearance.Material.Small.Inverse" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/_search_button"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/scHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        android:padding="10sp"
+        android:text="@string/_saved_cities"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savedCitiesListView"
+        android:layout_below="@+id/scHeader"
+        android:visibility="visible"
+        android:layout_alignRight="@+id/messageText"
+        android:layout_alignEnd="@+id/messageText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/_no_cities"
+        android:id="@+id/messageText"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/scHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

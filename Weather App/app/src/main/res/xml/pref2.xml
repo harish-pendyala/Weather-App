@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.harish.group14_hw08.CustomPreference
+        android:key="CURR_EXISTS"
+        android:title="Current City"
+        android:summary="Change Current City" />
+</PreferenceScreen>
